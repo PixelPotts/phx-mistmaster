@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact PHX MistMaster for misting system installation and repair in Phoenix. Call, email, or fill out our contact form.">
+  <title>Contact Us | PHX MistMaster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">PHX <span>MistMaster</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+16025551234" class="header-phone">&#9742; (602) 555-1234</a>
+        <a href="quote.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book Consultation</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Have questions? We'd love to hear from you. Reach out by phone, email, or use the form below.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div>
+          <h2 style="margin-bottom:2rem;">Get in Touch</h2>
+
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9742;</div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+16025551234">(602) 555-1234</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9993;</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:info@phxmistmaster.com">info@phxmistmaster.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon-circle">&#128197;</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 7:00 AM - 6:00 PM<br>Saturday: 8:00 AM - 2:00 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon-circle">&#128205;</div>
+            <div>
+              <h4>Service Area</h4>
+              <p>We serve the entire Phoenix metropolitan area including Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, and more.</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top:2rem; margin-bottom:1rem;">Service Areas</h3>
+          <div class="service-areas">
+            <div class="area-tag">Phoenix</div>
+            <div class="area-tag">Scottsdale</div>
+            <div class="area-tag">Tempe</div>
+            <div class="area-tag">Mesa</div>
+            <div class="area-tag">Chandler</div>
+            <div class="area-tag">Gilbert</div>
+            <div class="area-tag">Glendale</div>
+            <div class="area-tag">Peoria</div>
+            <div class="area-tag">Surprise</div>
+            <div class="area-tag">Goodyear</div>
+            <div class="area-tag">Cave Creek</div>
+            <div class="area-tag">Paradise Valley</div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <form class="contact-form card" action="https://formspree.io/f/your-form-id" method="POST">
+            <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
+
+            <div class="form-group">
+              <label>Full Name <span class="required">*</span></label>
+              <input type="text" name="name" class="form-control" placeholder="John Smith" required>
+              <div class="form-error">Please enter your name</div>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address <span class="required">*</span></label>
+              <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+              <div class="form-error">Please enter a valid email</div>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" class="form-control" placeholder="(602) 555-1234">
+            </div>
+
+            <div class="form-group">
+              <label>Subject</label>
+              <select name="subject" class="form-control">
+                <option value="general">General Inquiry</option>
+                <option value="quote">Request a Quote</option>
+                <option value="service">Schedule Service</option>
+                <option value="warranty">Warranty Question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Message <span class="required">*</span></label>
+              <textarea name="message" class="form-control" placeholder="How can we help you?" required></textarea>
+              <div class="form-error">Please enter a message</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425345.5843691715!2d-112.40574899999999!3d33.60561285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b12ed50a179cb%3A0x8c69c7f8354a1bac!2sPhoenix%2C%20AZ!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>PHX MistMaster</h4>
+          <p>Professional misting system installation and repair serving the entire Phoenix metropolitan area since 2014.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Residential Misting</a></li>
+            <li><a href="services.html">Commercial Systems</a></li>
+            <li><a href="services.html">Repair &amp; Maintenance</a></li>
+            <li><a href="services.html">Winterization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="contact.html">Phoenix</a></li>
+            <li><a href="contact.html">Scottsdale</a></li>
+            <li><a href="contact.html">Tempe &amp; Mesa</a></li>
+            <li><a href="contact.html">Chandler &amp; Gilbert</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+16025551234">(602) 555-1234</a></li>
+            <li><a href="mailto:info@phxmistmaster.com">info@phxmistmaster.com</a></li>
+            <li>Mon-Fri: 7 AM - 6 PM</li>
+            <li>Sat: 8 AM - 2 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

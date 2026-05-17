@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a free misting system consultation with PHX MistMaster. Choose your preferred date and time online.">
+  <title>Book a Consultation | PHX MistMaster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">PHX <span>MistMaster</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+16025551234" class="header-phone">&#9742; (602) 555-1234</a>
+        <a href="quote.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book Consultation</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Book a Consultation</h1>
+      <p>Schedule a free on-site consultation. We'll assess your property and provide a custom design plan.</p>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section>
+    <div class="container">
+      <form class="booking-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="booking-layout">
+          <!-- Calendar Side -->
+          <div>
+            <h3 style="margin-bottom:1.5rem;">Select Date &amp; Time</h3>
+            <div class="calendar-widget">
+              <div class="calendar-header">
+                <div class="calendar-nav">
+                  <button type="button" class="cal-prev">&lsaquo;</button>
+                </div>
+                <h3 class="calendar-month"></h3>
+                <div class="calendar-nav">
+                  <button type="button" class="cal-next">&rsaquo;</button>
+                </div>
+              </div>
+              <div class="calendar-grid"></div>
+              <div class="time-slots"></div>
+            </div>
+            <input type="hidden" name="preferred_date" value="">
+            <input type="hidden" name="preferred_time" value="">
+          </div>
+
+          <!-- Form Side -->
+          <div>
+            <h3 style="margin-bottom:1.5rem;">Your Information</h3>
+            <div class="form-group">
+              <label>Full Name <span class="required">*</span></label>
+              <input type="text" name="name" class="form-control" placeholder="John Smith" required>
+              <div class="form-error">Please enter your name</div>
+            </div>
+            <div class="form-group">
+              <label>Phone Number <span class="required">*</span></label>
+              <input type="tel" name="phone" class="form-control" placeholder="(602) 555-1234" required>
+              <div class="form-error">Please enter a valid phone number</div>
+            </div>
+            <div class="form-group">
+              <label>Email <span class="required">*</span></label>
+              <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+              <div class="form-error">Please enter a valid email address</div>
+            </div>
+            <div class="form-group">
+              <label>Property Address <span class="required">*</span></label>
+              <input type="text" name="address" class="form-control" placeholder="123 Main St, Phoenix, AZ" required>
+              <div class="form-error">Please enter your address</div>
+            </div>
+            <div class="form-group">
+              <label>Service Type</label>
+              <select name="service_type" class="form-control">
+                <option value="new-install">New Installation</option>
+                <option value="repair">Repair / Maintenance</option>
+                <option value="upgrade">System Upgrade</option>
+                <option value="consultation">General Consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Property Type</label>
+              <select name="property_type" class="form-control">
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Additional Notes</label>
+              <textarea name="notes" class="form-control" placeholder="Describe your project or any specific needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Book Consultation</button>
+          </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" style="display:none;">
+          <div class="checkmark">&#10003;</div>
+          <h2>Consultation Booked!</h2>
+          <p>We'll confirm your appointment within 2 hours via phone or email. If you need to reschedule, call us at (602) 555-1234.</p>
+          <a href="index.html" class="btn btn-primary" style="margin-top:1.5rem;">Back to Home</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>PHX MistMaster</h4>
+          <p>Professional misting system installation and repair serving the entire Phoenix metropolitan area since 2014.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Residential Misting</a></li>
+            <li><a href="services.html">Commercial Systems</a></li>
+            <li><a href="services.html">Repair &amp; Maintenance</a></li>
+            <li><a href="services.html">Winterization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="contact.html">Phoenix</a></li>
+            <li><a href="contact.html">Scottsdale</a></li>
+            <li><a href="contact.html">Tempe &amp; Mesa</a></li>
+            <li><a href="contact.html">Chandler &amp; Gilbert</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+16025551234">(602) 555-1234</a></li>
+            <li><a href="mailto:info@phxmistmaster.com">info@phxmistmaster.com</a></li>
+            <li>Mon-Fri: 7 AM - 6 PM</li>
+            <li>Sat: 8 AM - 2 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get a free misting system quote from PHX MistMaster. Quick 4-step form for residential or commercial projects in Phoenix.">
+  <title>Get a Free Quote | PHX MistMaster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">PHX <span>MistMaster</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+16025551234" class="header-phone">&#9742; (602) 555-1234</a>
+        <a href="quote.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Book Consultation</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get a Free Quote</h1>
+      <p>Tell us about your project and we'll provide a detailed estimate within 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section>
+    <div class="container" style="max-width:700px;">
+      <!-- Step Indicators -->
+      <div class="form-steps">
+        <div class="form-step-indicator active">
+          <span class="step-dot">1</span>
+          <span class="step-line"></span>
+        </div>
+        <div class="form-step-indicator">
+          <span class="step-dot">2</span>
+          <span class="step-line"></span>
+        </div>
+        <div class="form-step-indicator">
+          <span class="step-dot">3</span>
+          <span class="step-line"></span>
+        </div>
+        <div class="form-step-indicator">
+          <span class="step-dot">4</span>
+        </div>
+      </div>
+
+      <form class="multi-step-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <!-- Step 1: Service Type -->
+        <div class="form-panel active">
+          <h3 style="margin-bottom:0.5rem;">What do you need?</h3>
+          <p style="color:var(--gray-600); margin-bottom:2rem;">Select the type of service you're interested in.</p>
+
+          <div class="form-group">
+            <label>Service Type <span class="required">*</span></label>
+            <select name="service_type" class="form-control" required>
+              <option value="">Select a service...</option>
+              <option value="new-installation">New Misting System Installation</option>
+              <option value="repair">Repair Existing System</option>
+              <option value="maintenance">Maintenance / Tune-up</option>
+              <option value="upgrade">Upgrade Existing System</option>
+            </select>
+            <div class="form-error">Please select a service type</div>
+          </div>
+
+          <div class="form-group">
+            <label>Property Type <span class="required">*</span></label>
+            <select name="property_type" class="form-control" required>
+              <option value="">Select property type...</option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+            </select>
+            <div class="form-error">Please select a property type</div>
+          </div>
+
+          <div class="form-nav">
+            <div></div>
+            <button type="button" class="btn btn-primary btn-next">Next Step &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Property Details -->
+        <div class="form-panel">
+          <h3 style="margin-bottom:0.5rem;">Property Details</h3>
+          <p style="color:var(--gray-600); margin-bottom:2rem;">Help us understand the scope of your project.</p>
+
+          <div class="form-group">
+            <label>Area to be covered (approx. sq ft) <span class="required">*</span></label>
+            <input type="text" name="area_sqft" class="form-control" placeholder="e.g., 400 sq ft" required>
+            <div class="form-error">Please enter the approximate area</div>
+          </div>
+
+          <div class="form-group">
+            <label>Structure Type <span class="required">*</span></label>
+            <select name="structure_type" class="form-control" required>
+              <option value="">Select structure...</option>
+              <option value="covered-patio">Covered Patio</option>
+              <option value="open-patio">Open Patio / Deck</option>
+              <option value="pergola">Pergola / Gazebo</option>
+              <option value="pool-area">Pool / Spa Area</option>
+              <option value="restaurant-patio">Restaurant Patio</option>
+              <option value="warehouse">Warehouse / Loading Dock</option>
+              <option value="sports-facility">Sports Facility</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="form-error">Please select a structure type</div>
+          </div>
+
+          <div class="form-group">
+            <label>Do you have an existing misting system?</label>
+            <select name="existing_system" class="form-control">
+              <option value="no">No</option>
+              <option value="yes-working">Yes — it works but needs upgrade</option>
+              <option value="yes-broken">Yes — it's not working</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Additional details about your space</label>
+            <textarea name="property_details" class="form-control" placeholder="Number of posts, ceiling height, special requirements, etc."></textarea>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-outline btn-prev">&larr; Back</button>
+            <button type="button" class="btn btn-primary btn-next">Next Step &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact Info -->
+        <div class="form-panel">
+          <h3 style="margin-bottom:0.5rem;">Contact Information</h3>
+          <p style="color:var(--gray-600); margin-bottom:2rem;">How can we reach you with your quote?</p>
+
+          <div class="form-group">
+            <label>Full Name <span class="required">*</span></label>
+            <input type="text" name="name" class="form-control" placeholder="John Smith" required>
+            <div class="form-error">Please enter your name</div>
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number <span class="required">*</span></label>
+            <input type="tel" name="phone" class="form-control" placeholder="(602) 555-1234" required>
+            <div class="form-error">Please enter a valid phone number</div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address <span class="required">*</span></label>
+            <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+            <div class="form-error">Please enter a valid email address</div>
+          </div>
+
+          <div class="form-group">
+            <label>Property Address <span class="required">*</span></label>
+            <input type="text" name="address" class="form-control" placeholder="123 Main St, Phoenix, AZ 85001" required>
+            <div class="form-error">Please enter your property address</div>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-outline btn-prev">&larr; Back</button>
+            <button type="button" class="btn btn-primary btn-next">Next Step &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Photos (Optional) -->
+        <div class="form-panel">
+          <h3 style="margin-bottom:0.5rem;">Photos (Optional)</h3>
+          <p style="color:var(--gray-600); margin-bottom:2rem;">Upload photos of your space to help us provide a more accurate quote.</p>
+
+          <div class="file-upload" onclick="document.getElementById('photo-upload').click();">
+            <div class="upload-icon">&#128247;</div>
+            <p>Click to upload photos of your space</p>
+            <p style="font-size:0.85rem; color:var(--gray-300);">JPG, PNG up to 10MB each</p>
+            <input type="file" id="photo-upload" name="photos" multiple accept="image/*">
+          </div>
+
+          <div class="form-group" style="margin-top:2rem;">
+            <label>Preferred contact method</label>
+            <select name="contact_method" class="form-control">
+              <option value="phone">Phone Call</option>
+              <option value="text">Text Message</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Best time to reach you</label>
+            <select name="contact_time" class="form-control">
+              <option value="morning">Morning (7 AM - 12 PM)</option>
+              <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+              <option value="evening">Evening (5 PM - 8 PM)</option>
+              <option value="anytime">Anytime</option>
+            </select>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-outline btn-prev">&larr; Back</button>
+            <button type="submit" class="btn btn-primary btn-lg">Submit Quote Request</button>
+          </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" style="display:none;">
+          <div class="checkmark">&#10003;</div>
+          <h2>Quote Request Received!</h2>
+          <p>Thank you! We'll review your project details and get back to you within 24 hours with a detailed estimate.</p>
+          <p style="color:var(--gray-600);">Need it sooner? Call us directly at <a href="tel:+16025551234">(602) 555-1234</a></p>
+          <a href="index.html" class="btn btn-primary" style="margin-top:1.5rem;">Back to Home</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>PHX MistMaster</h4>
+          <p>Professional misting system installation and repair serving the entire Phoenix metropolitan area since 2014.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Residential Misting</a></li>
+            <li><a href="services.html">Commercial Systems</a></li>
+            <li><a href="services.html">Repair &amp; Maintenance</a></li>
+            <li><a href="services.html">Winterization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="contact.html">Phoenix</a></li>
+            <li><a href="contact.html">Scottsdale</a></li>
+            <li><a href="contact.html">Tempe &amp; Mesa</a></li>
+            <li><a href="contact.html">Chandler &amp; Gilbert</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+16025551234">(602) 555-1234</a></li>
+            <li><a href="mailto:info@phxmistmaster.com">info@phxmistmaster.com</a></li>
+            <li>Mon-Fri: 7 AM - 6 PM</li>
+            <li>Sat: 8 AM - 2 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
