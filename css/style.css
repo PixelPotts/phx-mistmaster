@@ -223,8 +223,8 @@ section {
 
 .hero-bg-left {
   background-position: left bottom;
-  -webkit-mask-image: linear-gradient(to right, black 25%, transparent 45%);
-  mask-image: linear-gradient(to right, black 25%, transparent 45%);
+  -webkit-mask-image: linear-gradient(to right, black 25%, transparent 50%);
+  mask-image: linear-gradient(to right, black 25%, transparent 50%);
 }
 
 .hero-content {
