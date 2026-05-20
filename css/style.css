@@ -221,6 +221,11 @@ section {
   opacity: 0.3;
 }
 
+.hero-bg-left {
+  -webkit-mask-image: linear-gradient(to right, black 25%, transparent 45%);
+  mask-image: linear-gradient(to right, black 25%, transparent 45%);
+}
+
 .hero-content {
   position: relative;
   text-align: center;
