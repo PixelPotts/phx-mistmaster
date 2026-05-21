@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Book a free misting system consultation with PHX MistMaster. Choose your preferred date and time online.">
   <title>Book a Consultation | PHX MistMaster</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta property="og:title" content="Book a Consultation | PHX MistMaster">
+  <meta property="og:description" content="Schedule a free on-site misting system consultation. Choose your preferred date and time online.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phxmistmaster.com/booking">
+  <meta property="og:image" content="https://phxmistmaster.com/images/hero-bg-2.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +20,7 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
 
   <!-- Header -->
   <header class="site-header">
@@ -48,7 +56,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <section class="page-hero">
+  <section id="main" class="page-hero">
     <div class="container">
       <h1>Book a Consultation</h1>
       <p>Schedule a free on-site consultation. We'll assess your property and provide a custom design plan.</p>
@@ -66,11 +74,11 @@
             <div class="calendar-widget">
               <div class="calendar-header">
                 <div class="calendar-nav">
-                  <button type="button" class="cal-prev">&lsaquo;</button>
+                  <button type="button" class="cal-prev" aria-label="Previous month">&lsaquo;</button>
                 </div>
                 <h3 class="calendar-month"></h3>
                 <div class="calendar-nav">
-                  <button type="button" class="cal-next">&rsaquo;</button>
+                  <button type="button" class="cal-next" aria-label="Next month">&rsaquo;</button>
                 </div>
               </div>
               <div class="calendar-grid"></div>
@@ -84,28 +92,28 @@
           <div>
             <h3 style="margin-bottom:1.5rem;">Your Information</h3>
             <div class="form-group">
-              <label>Full Name <span class="required">*</span></label>
-              <input type="text" name="name" class="form-control" placeholder="John Smith" required>
+              <label for="booking-name">Full Name <span class="required">*</span></label>
+              <input type="text" id="booking-name" name="name" class="form-control" placeholder="John Smith" required>
               <div class="form-error">Please enter your name</div>
             </div>
             <div class="form-group">
-              <label>Phone Number <span class="required">*</span></label>
-              <input type="tel" name="phone" class="form-control" placeholder="(602) 555-1234" required>
+              <label for="booking-phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="booking-phone" name="phone" class="form-control" placeholder="(602) 555-1234" required>
               <div class="form-error">Please enter a valid phone number</div>
             </div>
             <div class="form-group">
-              <label>Email <span class="required">*</span></label>
-              <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+              <label for="booking-email">Email <span class="required">*</span></label>
+              <input type="email" id="booking-email" name="email" class="form-control" placeholder="john@example.com" required>
               <div class="form-error">Please enter a valid email address</div>
             </div>
             <div class="form-group">
-              <label>Property Address <span class="required">*</span></label>
-              <input type="text" name="address" class="form-control" placeholder="123 Main St, Phoenix, AZ" required>
+              <label for="booking-address">Property Address <span class="required">*</span></label>
+              <input type="text" id="booking-address" name="address" class="form-control" placeholder="123 Main St, Phoenix, AZ" required>
               <div class="form-error">Please enter your address</div>
             </div>
             <div class="form-group">
-              <label>Service Type</label>
-              <select name="service_type" class="form-control">
+              <label for="booking-service">Service Type</label>
+              <select id="booking-service" name="service_type" class="form-control">
                 <option value="new-install">New Installation</option>
                 <option value="repair">Repair / Maintenance</option>
                 <option value="upgrade">System Upgrade</option>
@@ -113,15 +121,15 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Property Type</label>
-              <select name="property_type" class="form-control">
+              <label for="booking-property">Property Type</label>
+              <select id="booking-property" name="property_type" class="form-control">
                 <option value="residential">Residential</option>
                 <option value="commercial">Commercial</option>
               </select>
             </div>
             <div class="form-group">
-              <label>Additional Notes</label>
-              <textarea name="notes" class="form-control" placeholder="Describe your project or any specific needs..."></textarea>
+              <label for="booking-notes">Additional Notes</label>
+              <textarea id="booking-notes" name="notes" class="form-control" placeholder="Describe your project or any specific needs..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Book Consultation</button>
           </div>
@@ -175,7 +183,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
+        <p>&copy; 2026 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
       </div>
     </div>
   </footer>

@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Get a free misting system quote from PHX MistMaster. Quick 4-step form for residential or commercial projects in Phoenix.">
   <title>Get a Free Quote | PHX MistMaster</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta property="og:title" content="Get a Free Quote | PHX MistMaster">
+  <meta property="og:description" content="Quick 4-step form for residential or commercial misting system projects in Phoenix.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phxmistmaster.com/quote">
+  <meta property="og:image" content="https://phxmistmaster.com/images/hero-bg-2.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +20,7 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
 
   <!-- Header -->
   <header class="site-header">
@@ -48,7 +56,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <section class="page-hero">
+  <section id="main" class="page-hero">
     <div class="container">
       <h1>Get a Free Quote</h1>
       <p>Tell us about your project and we'll provide a detailed estimate within 24 hours.</p>
@@ -84,8 +92,8 @@
           <p style="color:var(--gray-600); margin-bottom:2rem;">Select the type of service you're interested in.</p>
 
           <div class="form-group">
-            <label>Service Type <span class="required">*</span></label>
-            <select name="service_type" class="form-control" required>
+            <label for="quote-service">Service Type <span class="required">*</span></label>
+            <select id="quote-service" name="service_type" class="form-control" required>
               <option value="">Select a service...</option>
               <option value="new-installation">New Misting System Installation</option>
               <option value="repair">Repair Existing System</option>
@@ -96,8 +104,8 @@
           </div>
 
           <div class="form-group">
-            <label>Property Type <span class="required">*</span></label>
-            <select name="property_type" class="form-control" required>
+            <label for="quote-property">Property Type <span class="required">*</span></label>
+            <select id="quote-property" name="property_type" class="form-control" required>
               <option value="">Select property type...</option>
               <option value="residential">Residential</option>
               <option value="commercial">Commercial</option>
@@ -117,14 +125,14 @@
           <p style="color:var(--gray-600); margin-bottom:2rem;">Help us understand the scope of your project.</p>
 
           <div class="form-group">
-            <label>Area to be covered (approx. sq ft) <span class="required">*</span></label>
-            <input type="text" name="area_sqft" class="form-control" placeholder="e.g., 400 sq ft" required>
+            <label for="quote-area">Area to be covered (approx. sq ft) <span class="required">*</span></label>
+            <input type="text" id="quote-area" name="area_sqft" class="form-control" placeholder="e.g., 400 sq ft" required>
             <div class="form-error">Please enter the approximate area</div>
           </div>
 
           <div class="form-group">
-            <label>Structure Type <span class="required">*</span></label>
-            <select name="structure_type" class="form-control" required>
+            <label for="quote-structure">Structure Type <span class="required">*</span></label>
+            <select id="quote-structure" name="structure_type" class="form-control" required>
               <option value="">Select structure...</option>
               <option value="covered-patio">Covered Patio</option>
               <option value="open-patio">Open Patio / Deck</option>
@@ -139,8 +147,8 @@
           </div>
 
           <div class="form-group">
-            <label>Do you have an existing misting system?</label>
-            <select name="existing_system" class="form-control">
+            <label for="quote-existing">Do you have an existing misting system?</label>
+            <select id="quote-existing" name="existing_system" class="form-control">
               <option value="no">No</option>
               <option value="yes-working">Yes — it works but needs upgrade</option>
               <option value="yes-broken">Yes — it's not working</option>
@@ -148,8 +156,8 @@
           </div>
 
           <div class="form-group">
-            <label>Additional details about your space</label>
-            <textarea name="property_details" class="form-control" placeholder="Number of posts, ceiling height, special requirements, etc."></textarea>
+            <label for="quote-details">Additional details about your space</label>
+            <textarea id="quote-details" name="property_details" class="form-control" placeholder="Number of posts, ceiling height, special requirements, etc."></textarea>
           </div>
 
           <div class="form-nav">
@@ -164,26 +172,26 @@
           <p style="color:var(--gray-600); margin-bottom:2rem;">How can we reach you with your quote?</p>
 
           <div class="form-group">
-            <label>Full Name <span class="required">*</span></label>
-            <input type="text" name="name" class="form-control" placeholder="John Smith" required>
+            <label for="quote-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="quote-name" name="name" class="form-control" placeholder="John Smith" required>
             <div class="form-error">Please enter your name</div>
           </div>
 
           <div class="form-group">
-            <label>Phone Number <span class="required">*</span></label>
-            <input type="tel" name="phone" class="form-control" placeholder="(602) 555-1234" required>
+            <label for="quote-phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="(602) 555-1234" required>
             <div class="form-error">Please enter a valid phone number</div>
           </div>
 
           <div class="form-group">
-            <label>Email Address <span class="required">*</span></label>
-            <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+            <label for="quote-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="quote-email" name="email" class="form-control" placeholder="john@example.com" required>
             <div class="form-error">Please enter a valid email address</div>
           </div>
 
           <div class="form-group">
-            <label>Property Address <span class="required">*</span></label>
-            <input type="text" name="address" class="form-control" placeholder="123 Main St, Phoenix, AZ 85001" required>
+            <label for="quote-address">Property Address <span class="required">*</span></label>
+            <input type="text" id="quote-address" name="address" class="form-control" placeholder="123 Main St, Phoenix, AZ 85001" required>
             <div class="form-error">Please enter your property address</div>
           </div>
 
@@ -206,8 +214,8 @@
           </div>
 
           <div class="form-group" style="margin-top:2rem;">
-            <label>Preferred contact method</label>
-            <select name="contact_method" class="form-control">
+            <label for="quote-contact-method">Preferred contact method</label>
+            <select id="quote-contact-method" name="contact_method" class="form-control">
               <option value="phone">Phone Call</option>
               <option value="text">Text Message</option>
               <option value="email">Email</option>
@@ -215,8 +223,8 @@
           </div>
 
           <div class="form-group">
-            <label>Best time to reach you</label>
-            <select name="contact_time" class="form-control">
+            <label for="quote-contact-time">Best time to reach you</label>
+            <select id="quote-contact-time" name="contact_time" class="form-control">
               <option value="morning">Morning (7 AM - 12 PM)</option>
               <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
               <option value="evening">Evening (5 PM - 8 PM)</option>
@@ -279,7 +287,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
+        <p>&copy; 2026 PHX MistMaster. All rights reserved. Licensed, Bonded &amp; Insured. ROC# 123456</p>
       </div>
     </div>
   </footer>

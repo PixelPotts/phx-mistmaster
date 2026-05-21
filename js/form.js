@@ -47,16 +47,26 @@ function initMultiStepForm() {
       e.preventDefault();
       return;
     }
-    // Show success message
     e.preventDefault();
-    const successEl = form.querySelector('.success-message');
-    if (successEl) {
-      panels.forEach(p => p.classList.remove('active'));
-      successEl.style.display = 'block';
-      document.querySelector('.form-steps').style.display = 'none';
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
     }
-    // Submit via fetch to Formspree
-    submitForm(form);
+    submitForm(form).then(() => {
+      const successEl = form.querySelector('.success-message');
+      if (successEl) {
+        panels.forEach(p => p.classList.remove('active'));
+        successEl.style.display = 'block';
+        document.querySelector('.form-steps').style.display = 'none';
+      }
+    }).catch(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Quote Request';
+      }
+      showFormError(form, 'Something went wrong. Please try again or call us directly.');
+    });
   });
 
   showStep(0);
@@ -115,10 +125,26 @@ function initContactForm() {
     });
 
     if (valid) {
-      submitForm(form);
-      const successEl = form.querySelector('.alert-success') || createSuccessAlert(form);
-      successEl.style.display = 'block';
-      form.reset();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+      submitForm(form).then(() => {
+        const successEl = form.querySelector('.alert-success') || createSuccessAlert(form);
+        successEl.style.display = 'block';
+        form.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      }).catch(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+        showFormError(form, 'Something went wrong. Please try again or call us directly.');
+      });
     }
   });
 }
@@ -137,27 +163,62 @@ function initBookingForm() {
       return;
     }
 
-    if (validatePanel(form)) {
-      submitForm(form);
-      const successEl = form.querySelector('.success-message');
-      if (successEl) successEl.style.display = 'block';
-      form.querySelector('.booking-layout').style.display = 'none';
+    // Validate required fields directly instead of using validatePanel
+    const fields = form.querySelectorAll('[required]');
+    let valid = true;
+    fields.forEach(field => {
+      const group = field.closest('.form-group');
+      if (!field.value.trim()) {
+        if (group) group.classList.add('error');
+        valid = false;
+      } else {
+        if (group) group.classList.remove('error');
+      }
+    });
+
+    if (valid) {
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Booking...';
+      }
+      submitForm(form).then(() => {
+        const successEl = form.querySelector('.success-message');
+        if (successEl) successEl.style.display = 'block';
+        form.querySelector('.booking-layout').style.display = 'none';
+      }).catch(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Book Consultation';
+        }
+        showFormError(form, 'Something went wrong. Please try again or call us directly.');
+      });
     }
   });
 }
 
 function submitForm(form) {
   const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
+  const hasFiles = formData.getAll('photos').some(f => f instanceof File && f.size > 0);
 
   // Formspree endpoint (replace with actual endpoint)
-  fetch('https://formspree.io/f/your-form-id', {
+  if (hasFiles) {
+    return fetch('https://formspree.io/f/your-form-id', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (!res.ok) throw new Error('Form submission failed');
+    });
+  }
+
+  const data = Object.fromEntries(formData.entries());
+  return fetch('https://formspree.io/f/your-form-id', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(data)
-  }).catch(() => {
-    // Silently handle — form success UI is already shown
-    console.log('Form data:', data);
+  }).then(res => {
+    if (!res.ok) throw new Error('Form submission failed');
   });
 }
 
@@ -168,4 +229,16 @@ function createSuccessAlert(form) {
   alert.style.display = 'none';
   form.prepend(alert);
   return alert;
+}
+
+function showFormError(form, message) {
+  let errorEl = form.querySelector('.alert-error');
+  if (!errorEl) {
+    errorEl = document.createElement('div');
+    errorEl.className = 'alert alert-error';
+    form.prepend(errorEl);
+  }
+  errorEl.textContent = message;
+  errorEl.style.display = 'block';
+  setTimeout(() => { errorEl.style.display = 'none'; }, 8000);
 }
